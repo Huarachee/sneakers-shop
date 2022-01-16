@@ -1,0 +1,64 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.cardContainer{
+    width: 300px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 10px 5px 5px rgba($color: #000000, $alpha:.5);
+    border: 1px solid #000;
+    transition: all .4s;
+    &:hover{
+        box-shadow: none;
+    }
+}
+
+.line{
+    width: 100%;
+    height: 1px;
+    background: #C4C4C4;
+}
+
+.infoCardContainer{
+    padding: 15px;
+    .cardTitle{
+        font-size: 30px;
+        font-weight: bold;
+        width: 174px;
+        line-height: 33px;
+        margin-bottom: 15px;
+    }
+    
+    .cardPrice{
+        font-size: 22px;
+        display: flex;
+        span{
+            margin-left: 5px;
+        }
+    }
+}
+
+.cardBtn{
+    margin-top: 23px;
+    .lookAtBtn,
+    .addBtn{
+        border-radius: 20px;
+        background-color: #fff;
+        border: 1px solid #000;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: 400;
+        padding: 5px 15px 5px 15px;
+    }
+
+    .addBtn{
+        margin-left: 15px;
+    }
+}
+
