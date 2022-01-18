@@ -129,3 +129,43 @@
   font-weight: bold;
   margin: 20px 0 20px 0;
 }
+
+.cardContainer{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 100px;
+  grid-row-gap: 50px;
+  margin: 40px auto 40px auto;
+}
+
+// Categories--start
+
+.categoriesContainer{
+  padding-bottom: 60px;
+  ul{
+      list-style-type: none;
+      display: flex;
+
+      li{
+          font-size: 24px;
+          font-weight: bold;
+          margin-right: 12px;
+          padding: 5px 20px 10px 20px;
+          cursor: pointer;
+          border-radius: 20px;
+          transition: all .4s;
+          &:hover{
+            color: #fff;
+            // background-color: #eee9e9;
+            background-color: #000;
+          }
+      }
+      .categoriesLiActive{
+        background-color: #000;
+        color: #fff;
+      }
+  }
+}
+
+// Categories--end

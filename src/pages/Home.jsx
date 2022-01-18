@@ -2,7 +2,9 @@ import React from 'react';
 
 import { Header, Categories, Card, Footer } from '../components/index';
 
-function Home() {
+function Home({ itemsCard }) {
+    
+
     return (
         <div className="homePage">
             <Header/>
@@ -80,17 +82,26 @@ function Home() {
                     <h1 className="homeContentTitle">
                         Кроссовки:
                     </h1>
-                    <Categories/>
-                    <Card/>
+                    <Categories items={['для бега', 'для осени', 'для зимы']}/>
+                    <div className="cardContainer">
+                        {itemsCard.map((item, index) => (
+                            <Card
+                                key={`${index}_${item}`}
+                                sneakersImg={item.sneakersImg}
+                                sneakersName={item.sneakersName}
+                                sneakersPrice={item.sneakersPrice}
+                            />
+                        ))}
+                    </div>
                 </div>
                 
             </section>
-            <section className="frequentlyBought">
+            {/* <section className="frequentlyBought">
                 <div className="container">
                     <h3 className="frequentlyBoughtTitle">Часто покупаемые:</h3>
                 </div>
                 
-            </section>
+            </section> */}
             <Footer/>
         </div>
         
