@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header, Categories, Card, Footer } from '../components/index';
+import { Header, Categories, SortPopup, Card, Footer } from '../components/index';
 
 function Home({ itemsCard }) {
     
@@ -82,7 +82,10 @@ function Home({ itemsCard }) {
                     <h1 className="homeContentTitle">
                         Кроссовки:
                     </h1>
-                    <Categories items={['для бега', 'для осени', 'для зимы']}/>
+                    <div className="homeContainerMenu">
+                        <Categories items={['для бега', 'для осени', 'для зимы']}/>
+                        <SortPopup items={['популярности', 'цене', 'алфавиту']}/>
+                    </div>
                     <div className="cardContainer">
                         {itemsCard.map((item, index) => (
                             <Card

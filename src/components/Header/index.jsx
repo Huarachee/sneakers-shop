@@ -1,5 +1,6 @@
 import React from "react";
 import styles from './Header.module.scss';
+import { Link } from 'react-router-dom';
 
 
 function Header() {
@@ -7,9 +8,11 @@ function Header() {
         <div className={styles.header}>
             <div className={styles.container}>
                 <div className={styles.headerContent}>
-                    <div className={styles.logo}>
-                        Sneakers shop
-                    </div>
+                    <Link className="link" to="/" exact>
+                        <div className={styles.logo}>
+                            Sneakers shop
+                        </div>
+                    </Link>
                     <menu>
                         <ul>
                             <li>Кроссовки</li>
@@ -17,9 +20,11 @@ function Header() {
                             <li>Распродажа</li>
                         </ul>
                     </menu>
-                    <div className={styles.cart}>
-                        Корзина
-                    </div>
+                    <Link className="link" to="/cart" exact>
+                        <div className={styles.cart}>
+                            Корзина
+                        </div>
+                    </Link>
                 </div>
                 
             </div>

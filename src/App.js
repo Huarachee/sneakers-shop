@@ -1,8 +1,9 @@
 import './index.scss';
 import React from 'react';
 import axios from 'axios';
+import { Route, Routes } from 'react-router-dom';
 
-import Home from './pages/Home';
+import { Home, Cart } from './pages/index';
 
 function App() {
   const [itemsCard, setItemsCard] = React.useState([]);
@@ -15,12 +16,10 @@ function App() {
 
   return (
     <div className="App">
-      <Home
-        itemsCard={itemsCard}
-      />
-      <header className="App-header">
-        
-      </header>
+      <Routes>
+        <Route path="/" element={<Home itemsCard={itemsCard} />} exact />
+        <Route path="/cart" element={<Cart/>} exact/>
+      </Routes>
     </div>
   );
 }
